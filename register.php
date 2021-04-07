@@ -1,35 +1,11 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Đăng ký thành viên</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-</head>
-
-<body style="background-color: #ccffff;">
-    <div class="container-fluid" style="background: #f6fbf9;">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-between p-2">
-                <img id="logo" style="margin-left: 10px;" width="100px" height="50px"
-                    src="https://i.ibb.co/yBR65jg/large.png" alt="">
-                <div>
-                    <button id="" class="btn btn-primary">Login</button>
-                    <button id="register" class="btn btn-secondary">Register</button>
-                </div>
-            </div>
-        </div>
-    </div>
- 
+<?php include 'header.php'; ?>
     <div class="container" style="margin-top: 100px;">
         <div class="card">
             <article class="card-body mx-auto" style="max-width: 400px;">
                 <h4 class="card-title mt-3 text-center">Create Account</h4>
                 <p class="text-center">Get started with your free account</p>
                 <form method="POST">
-                <div class="form-group input-group">
+                    <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
@@ -45,7 +21,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
                         </div>
-                        <input name="date" class="form-control" placeholder="Date of Birth yyyy/mm/dd" type="text">
+                        <input name="date" class="form-control" placeholder="Date of Birth yyyy/mm/dd" type="date">
                     </div> <!-- form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
@@ -79,7 +55,8 @@
                             <button type="submit" name="submit" class="btn btn-primary btn-block"> Create Account </button>
                         </div> <!-- form-group// -->
                         <div class="form-group col-12 mt-3 text-center">
-                            <button class="btn">Have an account? <a href="">Log In</a> </button>
+                            <button class="btn">Log In</button>
+                            <a href="./login/login.php">Login</a>
                         </div>
                 </form>
             </article>
@@ -124,12 +101,4 @@
                 echo "<script type='text/javascript'>alert('$message');</script>";
             }
         ?>
-</body>
-
-<script>
-    document.getElementById("logo").addEventListener('click', () => {
-        window.location.href = window.location.pathname.replace('/register/index.html', "/index.html");
-    })
-</script>
-
-</html>
+<?php include 'footer.php'; ?>
